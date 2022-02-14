@@ -33,7 +33,7 @@ describe('PostList', () => {
     render(<App />);
 
     await waitFor(() =>
-      expect(screen.getAllByRole('link')).toHaveLength(mockResponse.length + 3)
+      expect(screen.getAllByRole('link')).toHaveLength(mockResponse.length + 4)
     );
 
     for (const { id, title, body } of mockResponse) {

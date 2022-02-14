@@ -7,6 +7,7 @@ import UserDetails from 'modules/users/components/UserDetails';
 import PostDetails from 'modules/posts/components/PostDetails';
 import Welcome from 'modules/ui/components/Welcome';
 import axios from 'axios';
+import Login from 'modules/auth/components/Login';
 
 axios.defaults.baseURL = process.env['REACT_APP_API_URL'];
 
@@ -16,6 +17,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Welcome />}></Route>
+          <Route path="auth/login" element={<Login />}></Route>
           <Route path="posts" element={<PostList />}>
             <Route path=":id" element={<PostDetails />}></Route>
           </Route>
